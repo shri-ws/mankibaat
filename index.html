@@ -17,12 +17,12 @@
             var name = document.getElementById("name").value;
             var topic = document.getElementById("topic").value;
 
-            if (name === "" || topic === "") {
+            if (name === "https://whatsapp.com/channel/0029VbAURev7IUYPTH4LSs41" || topic === "") {
                 alert("Please enter your name and select a topic.");
                 return false;
             }
 
-            var phoneNumber = "9453561588";  // Replace with your WhatsApp number (without + or spaces)
+            var phoneNumber = "";  // Replace with your WhatsApp number (without + or spaces)
             var message = "Hi, I want to talk on Man Ki Baat.\n\nName: " + name + "\nTopic: " + topic;
             var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
 
