@@ -12,14 +12,32 @@
         button { padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
         button:hover { background: #218838; }
     </style>
+    <script>
+        function sendToWhatsApp() {
+            var name = document.getElementById("name").value;
+            var topic = document.getElementById("topic").value;
+
+            if (name === "" || topic === "") {
+                alert("Please enter your name and select a topic.");
+                return false;
+            }
+
+            var phoneNumber = "9453561588";  // Replace with your WhatsApp number (without + or spaces)
+            var message = "Hi, I want to talk on Man Ki Baat.\n\nName: " + name + "\nTopic: " + topic;
+            var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+            window.location.href = whatsappURL;
+            return false;
+        }
+    </script>
 </head>
 <body>
     <h1>Man Ki Baat</h1>
     <p>Talk your heart out. Choose a topic and share your thoughts.</p>
 
-    <form action="https://wa.me/9453561588" method="GET">
-        <input type="text" name="name" placeholder="Enter your name" required>
-        <select name="topic" required>
+    <form onsubmit="return sendToWhatsApp()">
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <select id="topic" required>
             <option value="">Select a topic...</option>
             <option value="Stress">Stress</option>
             <option value="Anxiety">Anxiety</option>
