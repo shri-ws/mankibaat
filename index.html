@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Talk & Heal</title>
+    <title>Man Ki Baat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f8f9fa; }
         h1 { color: #333; }
         p { font-size: 18px; }
-        a { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; }
+        form { margin-top: 20px; }
+        input, select { padding: 10px; margin: 10px; width: 80%; max-width: 300px; border: 1px solid #ccc; border-radius: 5px; }
+        button { padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #218838; }
     </style>
 </head>
 <body>
-    <h1>Need Someone to Talk To?</h1>
-    <p>Book a call with a listener and share your thoughts.</p>
-    <a href="https://whatsapp.com/channel/0029VbAURev7IUYPTH4LSs41">Book a Call</a>
+    <h1>Man Ki Baat</h1>
+    <p>Talk your heart out. Choose a topic and share your thoughts.</p>
+
+    <form action="https://wa.me/YOURNUMBER" method="GET">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <select name="topic" required>
+            <option value="">Select a topic...</option>
+            <option value="Stress">Stress</option>
+            <option value="Anxiety">Anxiety</option>
+            <option value="Loneliness">Loneliness</option>
+            <option value="Career Guidance">Career Guidance</option>
+            <option value="Relationships">Relationships</option>
+            <option value="General Talk">General Talk</option>
+        </select>
+        <button type="submit">Book a Call</button>
+    </form>
 </body>
 </html>
